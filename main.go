@@ -13,7 +13,7 @@ type fuckity struct {
 	Ass     []fuckity
 }
 
-func cheecks(butthole string) (string, error) {
+func Cheecks(butthole string) (string, error) {
 	htmx := "<script src=\"https://unpkg.com/htmx.org@1.9.9\" type=\"text/javascript\"></script>"
 	tailwind := "<script src=\"https://cdn.tailwindcss.com\"></script>"
 	head := "<head>" + "\n" + htmx + "\n" + tailwind + "\n</head>"
@@ -48,7 +48,7 @@ func deez(fuck fuckity) string {
 
 }
 
-func fuck(shit fuckity) (string, error) {
+func Fuck(shit fuckity) (string, error) {
 	s := ""
 	if shit.Ass == nil {
 		d := deez(shit)
@@ -67,7 +67,7 @@ func fuck(shit fuckity) (string, error) {
 
 			continue
 		}
-		nested, _ := fuck(c)
+		nested, _ := Fuck(c)
 		s += nested
 		s += "\n"
 	}
@@ -79,14 +79,14 @@ func fuck(shit fuckity) (string, error) {
 	// s = strings.TrimSuffix(s, "\n")
 	// s = strings.TrimPrefix(s, "\n")
 	inter_fuck := fuckity{s, shit.Params, nil}
-	return fuck(inter_fuck)
+	return Fuck(inter_fuck)
 
 }
 
 func main() {
 
-	result, _ := fuck(fuckity{"title", "class='bg-black text-white text-xl' hx-post='/clicked' hx-trigger='click'", []fuckity{{"subtitle 1", "class='text-lg'", []fuckity{{"sub-sub-title", "", nil}}}, {"subtitle2", "", nil}}})
-	final_final_result, _ := cheecks(result)
+	result, _ := Fuck(fuckity{"title", "class='bg-black text-white text-xl' hx-post='/clicked' hx-trigger='click'", []fuckity{{"subtitle 1", "class='text-lg'", []fuckity{{"sub-sub-title", "", nil}}}, {"subtitle2", "", nil}}})
+	final_final_result, _ := Fheecks(result)
 	f, err := os.Create("index.html")
 	if err != nil {
 		log.Fatal(err)
