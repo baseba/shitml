@@ -2,8 +2,6 @@ package main
 
 import (
 	"fmt"
-	"log"
-	"os"
 	"strings"
 )
 
@@ -80,23 +78,5 @@ func Fuck(shit Fuckity) (string, error) {
 	// s = strings.TrimPrefix(s, "\n")
 	inter_fuck := Fuckity{s, shit.Params, nil}
 	return Fuck(inter_fuck)
-
-}
-
-func main() {
-
-	result, _ := Fuck(Fuckity{"title", "class='bg-black text-white text-xl' hx-post='/clicked' hx-trigger='click'", []Fuckity{{"subtitle 1", "class='text-lg'", []Fuckity{{"sub-sub-title", "", nil}}}, {"subtitle2", "", nil}}})
-	final_final_result, _ := Cheecks(result)
-	f, err := os.Create("index.html")
-	if err != nil {
-		log.Fatal(err)
-	}
-	defer f.Close()
-	_, err2 := f.WriteString(final_final_result)
-	if err2 != nil {
-		log.Fatal(err2)
-	}
-
-	fmt.Print("done")
 
 }
