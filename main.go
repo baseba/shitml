@@ -85,7 +85,7 @@ func fuck(shit fuckity) (string, error) {
 
 func main() {
 
-	result, _ := fuck(fuckity{"title", "class='bg-black text-white text-xl' hx-post='/clicked' hx-trigger='click", []fuckity{{"subtitle 1", "class='text-lg'", []fuckity{{"sub-sub-title", "", nil}}}, {"subtitle2", "", nil}}})
+	result, _ := fuck(fuckity{"title", "class='bg-black text-white text-xl' hx-post='/clicked' hx-trigger='click'", []fuckity{{"subtitle 1", "class='text-lg'", []fuckity{{"sub-sub-title", "", nil}}}, {"subtitle2", "", nil}}})
 	final_final_result, _ := cheecks(result)
 	f, err := os.Create("index.html")
 	if err != nil {
