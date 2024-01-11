@@ -9,5 +9,5 @@ A superior way to write html
 - Eric Cartman created the syntax
 
 # syntax
-![The inspiration from our syntax](https://www.youtube.com/watch?v=PmCLeTqD4hY)
+add video here
 
