@@ -1,6 +1,11 @@
 # shitml
 A superior way to write html
 
+# instalation
+```
+go get github.com/baseba/shitml
+```
+
 
 # Manifest 
 
@@ -28,11 +33,12 @@ type fuckity struct {
 
 ### with this type we can build a `fuck()` function who returns a <code>\<div\></code>
 
-- example
+## example
+here we can see that the readable function 
  ```
- fuck(fuckity{"i am the content", "class='bg-black text-white text-xl' hx-post='/clicked' hx-trigger='click'", nil})
+ shitml.fuck(shitml.fuckity{Content: "i am the content", Params: "class='bg-black text-white text-xl' hx-post='/clicked' hx-trigger='click'",Ass: nil})
  ```
- generates 
+ generates this complex and messy HTML
  ```
  <div class='bg-black text-white text-xl' hx-post='/clicked' hx-trigger='click' >
     i am the content
