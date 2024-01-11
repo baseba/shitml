@@ -9,5 +9,6 @@ A superior way to write html
 - Eric Cartman created the syntax
 
 # syntax
-add video here
+https://github.com/baseba/shitml/assets/48297670/6c933438-7cdb-4f0d-a749-0316666e9629
+
 
