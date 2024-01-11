@@ -7,7 +7,7 @@ import (
 func TestCreateHTML(t *testing.T) {
 	// TODO: Write your test case here
 	t.Run("simple text", func(t *testing.T) {
-		f := fuckity{"this is simple text", "", nil}
+		f := Fuckity{"this is simple text", "", nil}
 		got, _ := Fuck(f)
 		want := "<div>\nthis is simple text\n</div>"
 		if got != want {
@@ -15,7 +15,7 @@ func TestCreateHTML(t *testing.T) {
 		}
 	})
 	t.Run("simple text with params", func(t *testing.T) {
-		f := fuckity{"this is simple text", "hx-post=\"/submit\"", nil}
+		f := Fuckity{"this is simple text", "hx-post=\"/submit\"", nil}
 		got, _ := Fuck(f)
 		want := "<div hx-post=\"/submit\" >\nthis is simple text\n</div>"
 		if got != want {
@@ -24,11 +24,11 @@ func TestCreateHTML(t *testing.T) {
 	})
 
 	t.Run("fuck with asses", func(t *testing.T) {
-		c1 := fuckity{"ass 1", "", nil}
-		c2 := fuckity{"ass 2", "", nil}
-		c3 := fuckity{"ass 3", "", nil}
-		l := []fuckity{c1, c2, c3}
-		f := fuckity{"", "hx-post=\"/submit\"", l}
+		c1 := Fuckity{"ass 1", "", nil}
+		c2 := Fuckity{"ass 2", "", nil}
+		c3 := Fuckity{"ass 3", "", nil}
+		l := []Fuckity{c1, c2, c3}
+		f := Fuckity{"", "hx-post=\"/submit\"", l}
 
 		got, _ := Fuck(f)
 		want := `<div hx-post="/submit" >
@@ -47,8 +47,8 @@ ass 3
 		}
 	})
 	t.Run("ass equals another fuck + Content", func(t *testing.T) {
-		f_inside := fuckity{"inside content", "", nil}
-		f := fuckity{"outside content", "", []fuckity{f_inside}}
+		f_inside := Fuckity{"inside content", "", nil}
+		f := Fuckity{"outside content", "", []Fuckity{f_inside}}
 		got, _ := Fuck(f)
 		want :=
 			`<div>

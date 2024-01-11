@@ -7,10 +7,10 @@ import (
 	"strings"
 )
 
-type fuckity struct {
+type Fuckity struct {
 	Content string
 	Params  string
-	Ass     []fuckity
+	Ass     []Fuckity
 }
 
 func Cheecks(butthole string) (string, error) {
@@ -21,7 +21,7 @@ func Cheecks(butthole string) (string, error) {
 	return r, nil
 }
 
-func deez(fuck fuckity) string {
+func deez(fuck Fuckity) string {
 
 	switch fuck.Params {
 	case "":
@@ -48,7 +48,7 @@ func deez(fuck fuckity) string {
 
 }
 
-func Fuck(shit fuckity) (string, error) {
+func Fuck(shit Fuckity) (string, error) {
 	s := ""
 	if shit.Ass == nil {
 		d := deez(shit)
@@ -78,15 +78,15 @@ func Fuck(shit fuckity) (string, error) {
 
 	// s = strings.TrimSuffix(s, "\n")
 	// s = strings.TrimPrefix(s, "\n")
-	inter_fuck := fuckity{s, shit.Params, nil}
+	inter_fuck := Fuckity{s, shit.Params, nil}
 	return Fuck(inter_fuck)
 
 }
 
 func main() {
 
-	result, _ := Fuck(fuckity{"title", "class='bg-black text-white text-xl' hx-post='/clicked' hx-trigger='click'", []fuckity{{"subtitle 1", "class='text-lg'", []fuckity{{"sub-sub-title", "", nil}}}, {"subtitle2", "", nil}}})
-	final_final_result, _ := Fheecks(result)
+	result, _ := Fuck(Fuckity{"title", "class='bg-black text-white text-xl' hx-post='/clicked' hx-trigger='click'", []Fuckity{{"subtitle 1", "class='text-lg'", []Fuckity{{"sub-sub-title", "", nil}}}, {"subtitle2", "", nil}}})
+	final_final_result, _ := Cheecks(result)
 	f, err := os.Create("index.html")
 	if err != nil {
 		log.Fatal(err)
