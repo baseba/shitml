@@ -9,9 +9,9 @@ go get github.com/baseba/shitml
 
 ## Manifest
 
-- Only `<div>` is necessary.
-- Functions are considered superior.
-- The syntax was inspired by Eric Cartman.
+- Becauso of HTMX you only need `<div(s)>`.
+- Functions to write elements.
+- Cursewords are easier to remember.
 
 ### Syntax Inspiration
 [Syntax Inspiration Link](https://github.com/baseba/shitml/assets/48297670/6c933438-7cdb-4f0d-a749-0316666e9629)
